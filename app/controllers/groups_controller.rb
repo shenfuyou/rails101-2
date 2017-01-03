@@ -16,8 +16,9 @@ class GroupsController < ApplicationController
   else
     render :new
    end
-  def show
-  @group = Group.find(params[:id])
+   def show
+   @group = Group.find(params[:id])
+   @posts = @group.posts
  end
  def edit
     end
